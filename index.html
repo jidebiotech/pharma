@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Science-to-Approval Gap | Strategic Script</title>
+<title>Regulatory · Science · Pharma Strategy</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --ink: #0e0c0a;
@@ -23,18 +25,16 @@
     font-family: 'Libre Baskerville', Georgia, serif;
     line-height: 1.75;
     min-height: 100vh;
-    overflow-x: hidden;
   }
 
-  /* MASTHEAD */
   .masthead {
     border-bottom: 3px double var(--ink);
     padding: 28px 48px 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    animation: fadeDown 0.8s ease both;
   }
+
   .masthead-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.68rem;
@@ -42,23 +42,21 @@
     text-transform: uppercase;
     color: var(--muted);
   }
+
   .masthead-title {
     font-family: 'DM Mono', monospace;
     font-size: 0.72rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--accent);
-    font-weight: 400;
   }
 
-  /* HERO */
   .hero {
     padding: 64px 48px 48px;
     max-width: 900px;
     margin: 0 auto;
-    position: relative;
-    animation: fadeUp 0.9s 0.2s ease both;
   }
+
   .hero-kicker {
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
@@ -68,31 +66,31 @@
     display: block;
     margin-bottom: 20px;
   }
+
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.4rem, 5vw, 4.2rem);
-    line-height: 1.12;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.1;
     font-weight: 900;
-    letter-spacing: -0.02em;
     margin-bottom: 24px;
-    max-width: 16ch;
+    max-width: 18ch;
   }
+
   .hero h1 em {
     font-style: italic;
     color: var(--accent);
   }
+
   .hero-sub {
     font-family: 'DM Mono', monospace;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: var(--muted);
     letter-spacing: 0.08em;
     border-left: 3px solid var(--gold);
     padding-left: 16px;
-    line-height: 1.6;
-    max-width: 55ch;
+    max-width: 60ch;
   }
 
-  /* DIVIDER */
   .rule {
     max-width: 900px;
     margin: 0 auto;
@@ -101,14 +99,12 @@
     border-top: 1px solid var(--rule);
   }
 
-  /* SCRIPT CONTAINER */
   .script-wrapper {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 48px 80px;
   }
 
-  /* SECTION LABEL */
   .section-tag {
     display: inline-block;
     font-family: 'DM Mono', monospace;
@@ -122,97 +118,55 @@
     margin-top: 52px;
   }
 
-  /* BEAT BLOCK — main script unit */
   .beat {
-    position: relative;
-    padding: 36px 0 36px 0;
+    padding: 36px 0;
     border-bottom: 1px solid var(--rule);
-    animation: fadeUp 0.6s ease both;
   }
-  .beat:last-child { border-bottom: none; }
 
-  .beat-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
-    color: var(--gold);
-    position: absolute;
-    top: 38px;
-    left: -52px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    opacity: 0.7;
-  }
+  .beat:last-child { border-bottom: none; }
 
   .beat-hook {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
     font-weight: 700;
-    line-height: 1.35;
     margin-bottom: 16px;
-    color: var(--ink);
-  }
-  .beat-hook em {
-    font-style: italic;
-    color: var(--accent);
   }
 
   .beat p {
-    font-size: 0.97rem;
+    font-size: 0.98rem;
     line-height: 1.85;
-    color: #2a2520;
     max-width: 65ch;
     margin-bottom: 14px;
   }
-  .beat p:last-child { margin-bottom: 0; }
 
-  /* CALLOUT — punchy single-line emphasis */
   .callout {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.3rem, 2.8vw, 1.85rem);
     font-style: italic;
-    font-weight: 400;
-    line-height: 1.4;
     border-left: 5px solid var(--accent);
     padding: 18px 28px;
     margin: 44px 0;
-    color: var(--ink);
     background: rgba(184,74,46,0.04);
-    animation: fadeLeft 0.7s ease both;
   }
 
-  /* FRAMEWORK BOX */
   .framework-box {
     border: 2px solid var(--ink);
     padding: 32px 36px;
     margin: 48px 0;
-    position: relative;
-    animation: fadeUp 0.7s ease both;
   }
-  .framework-box::before {
-    content: 'FRAMEWORK';
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.25em;
-    background: var(--cream);
-    padding: 0 10px;
-    position: absolute;
-    top: -9px;
-    left: 24px;
-    color: var(--muted);
-  }
+
   .framework-box h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
-    font-weight: 700;
     margin-bottom: 20px;
   }
+
   .fw-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 40px;
-    margin-top: 16px;
   }
+
   .fw-col-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
@@ -221,261 +175,119 @@
     margin-bottom: 10px;
     color: var(--muted);
   }
+
   .fw-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
     margin-bottom: 8px;
     font-size: 0.9rem;
-    line-height: 1.5;
   }
-  .fw-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 7px;
-  }
-  .fw-dot.science { background: var(--muted); }
-  .fw-dot.reg { background: var(--accent); }
 
-  /* CLOSING CTA */
   .cta-block {
     margin-top: 56px;
     padding: 44px 48px;
     background: var(--ink);
     color: var(--cream);
-    position: relative;
-    overflow: hidden;
-    animation: fadeUp 0.8s ease both;
   }
-  .cta-block::after {
-    content: '';
-    position: absolute;
-    right: -30px;
-    top: -30px;
-    width: 200px;
-    height: 200px;
-    border: 40px solid rgba(201,168,76,0.12);
-    border-radius: 50%;
-  }
-  .cta-block::before {
-    content: '';
-    position: absolute;
-    right: 60px;
-    bottom: -50px;
-    width: 300px;
-    height: 300px;
-    border: 55px solid rgba(184,74,46,0.08);
-    border-radius: 50%;
-  }
+
   .cta-block h2 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 900;
-    line-height: 1.2;
     margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-    max-width: 22ch;
   }
+
   .cta-block h2 em {
-    font-style: italic;
     color: var(--gold);
   }
+
   .cta-block p {
     font-size: 0.95rem;
     line-height: 1.8;
-    color: rgba(245,240,232,0.8);
+    color: rgba(245,240,232,0.85);
     max-width: 60ch;
-    position: relative;
-    z-index: 1;
     margin-bottom: 12px;
   }
-  .cta-block .sign-off {
+
+  .sign-off {
     margin-top: 28px;
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--gold);
-    position: relative;
-    z-index: 1;
   }
 
-  /* DIRECTOR NOTES */
-  .director-notes {
-    margin-top: 56px;
-    padding: 28px 36px;
-    border: 1px dashed var(--rule);
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    line-height: 1.8;
-    color: var(--muted);
-  }
-  .director-notes strong {
-    color: var(--ink);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 0.65rem;
-    display: block;
-    margin-bottom: 10px;
-  }
-  .note-item { margin-bottom: 6px; }
-
-  /* ANIMATIONS */
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeLeft {
-    from { opacity: 0; transform: translateX(-16px); }
-    to { opacity: 1; transform: translateX(0); }
+  a {
+    color: var(--accent);
+    text-decoration: none;
   }
 
-  .beat:nth-child(1) { animation-delay: 0.3s; }
-  .beat:nth-child(2) { animation-delay: 0.45s; }
-  .beat:nth-child(3) { animation-delay: 0.6s; }
-  .beat:nth-child(4) { animation-delay: 0.75s; }
-  .beat:nth-child(5) { animation-delay: 0.9s; }
-  .beat:nth-child(6) { animation-delay: 1.05s; }
+  a:hover {
+    text-decoration: underline;
+  }
 
   @media (max-width: 700px) {
     .masthead, .hero, .script-wrapper { padding-left: 24px; padding-right: 24px; }
-    .beat-num { display: none; }
     .fw-row { grid-template-columns: 1fr; }
     .cta-block { padding: 32px 24px; }
   }
+
 </style>
 </head>
+
 <body>
 
-<!-- MASTHEAD -->
 <header class="masthead">
-  <span class="masthead-label">First-Person Script &nbsp;·&nbsp; Strategic Commentary</span>
-  <span class="masthead-title">Biotech &amp; Regulatory Thinking</span>
+  <span class="masthead-label">Strategic Publication</span>
+  <span class="masthead-title">Regulatory · Science · Pharma</span>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <span class="hero-kicker">Opening Line — Hook Hard</span>
-  <h1>The science was <em>brilliant.</em><br>The drug never existed.</h1>
-  <p class="hero-sub">A strategic script for scientists, investors &amp; biotech builders on why regulatory blindness kills great work — and what to do about it.</p>
+  <span class="hero-kicker">Regulatory · Science · Pharma Strategy</span>
+  <h1>Where Science Meets<br><em>Regulatory Reality</em><br>And Business Consequence.</h1>
+  <p class="hero-sub">
+    Analysis at the intersection of biology, regulatory architecture, manufacturing systems, and capital strategy.
+  </p>
 </section>
 
 <hr class="rule">
 
-<!-- SCRIPT -->
 <main class="script-wrapper">
 
-  <span class="section-tag">The Hook</span>
+  <span class="section-tag">The Intersection</span>
 
   <div class="beat">
-    <span class="beat-num">01</span>
-    <p class="beat-hook">I want to tell you about a failure mode that no one talks about at conferences.</p>
-    <p>It's not bad science. It's not underfunding. It's not even bad luck.</p>
-    <p>It's this: brilliant scientists building brilliant things that regulators will <em>never</em> approve — and not finding out until it's too late.</p>
-    <p>I've seen it happen. I've worked inside it. And the tragedy is that it's almost entirely preventable.</p>
+    <p class="beat-hook">Innovation in pharma rarely fails because the science was unsound.</p>
+    <p>It fails in the space between disciplines.</p>
+    <p>Science optimizes for truth. Regulation optimizes for risk control. Business optimizes for capital efficiency and time.</p>
+    <p>When those systems are not aligned from day one, failure becomes structural — and structural failures compound quietly.</p>
   </div>
+
+  <div class="callout">
+    "In regulated markets, value is created — or destroyed — at the intersection."
+  </div>
+
+  <span class="section-tag">Selected Writing</span>
 
   <div class="beat">
-    <span class="beat-num">02</span>
-    <p class="beat-hook">Here's the uncomfortable truth nobody wants to say out loud in academia.</p>
-    <p>Scientists are not bad at regulatory thinking because they're not smart enough. They're operating under a completely different set of incentives — and those incentives are, by design, in conflict with the path to approval.</p>
-    <p>Academic culture asks: <em>Is it novel? Is it elegant? Is the mechanism interesting?</em></p>
-    <p>The regulatory world asks something different entirely: <em>Is it approvable? Can it be manufactured at scale? Can it survive a risk-benefit analysis that a regulator, not a journal editor, will sign off on?</em></p>
-    <p>Those are not the same question. And confusing them costs the industry years, hundreds of millions of dollars, and — most importantly — patients who never got the treatment that could have helped them.</p>
+    <p class="beat-hook">
+      <a href="articles/science-to-approval.html">
+        The Science-to-Approval Gap
+      </a>
+    </p>
+    <p>Why brilliant programs collapse when regulatory architecture enters too late — and how to design differently.</p>
   </div>
 
-  <callout class="callout">
-    "The gap isn't intellectual. It's structural. And structures can be redesigned."
-  </callout>
-
-  <span class="section-tag">The Diagnosis</span>
+  <span class="section-tag">Closing Perspective</span>
 
   <div class="beat">
-    <span class="beat-num">03</span>
-    <p class="beat-hook">Think about what we actually train scientists to optimize for.</p>
-    <p>Discovery. Novelty. Publications. Mechanistic depth. All of it rewarded, all of it celebrated — and almost none of it directly mapped to regulatory success.</p>
-    <p>Meanwhile, regulatory reality rewards something that sounds almost boring by comparison: reproducibility. Standardization. Risk management. Documentation that nobody wants to write. Alignment with predefined frameworks that feel, from inside a lab, like bureaucratic scaffolding built for someone else's building.</p>
-    <p>Here's the thing though. Those aren't constraints on good science. They <em>are</em> good science — if the goal is impact and not just insight.</p>
-    <p>Academia discovers truth under uncertainty. Regulation controls risk under uncertainty. They're solving different problems, but too often, they're not talking to each other until it's far too late.</p>
+    <p class="beat-hook">Regulatory architecture is not a compliance function.</p>
+    <p>It is a business function. It shapes timelines, capital deployment, and whether innovation survives real-world systems.</p>
   </div>
 
-  <div class="framework-box">
-    <h3>Two Cultures. One Pipeline.</h3>
-    <div class="fw-row">
-      <div>
-        <div class="fw-col-label">Academic Mindset Rewards</div>
-        <div class="fw-item"><span class="fw-dot science"></span>Discovery &amp; novelty</div>
-        <div class="fw-item"><span class="fw-dot science"></span>Mechanistic elegance</div>
-        <div class="fw-item"><span class="fw-dot science"></span>Statistical significance</div>
-        <div class="fw-item"><span class="fw-dot science"></span>Publication &amp; citation</div>
-      </div>
-      <div>
-        <div class="fw-col-label">Regulatory Reality Rewards</div>
-        <div class="fw-item"><span class="fw-dot reg"></span>Reproducibility &amp; standardization</div>
-        <div class="fw-item"><span class="fw-dot reg"></span>Risk management &amp; documentation</div>
-        <div class="fw-item"><span class="fw-dot reg"></span>Predefined framework alignment</div>
-        <div class="fw-item"><span class="fw-dot reg"></span>Approvable, manufacturable outcomes</div>
-      </div>
-    </div>
-  </div>
-
-  <span class="section-tag">The Real Damage</span>
-
-  <div class="beat">
-    <span class="beat-num">04</span>
-    <p class="beat-hook">The really costly part isn't the mindset gap. It's the timing gap.</p>
-    <p>Many promising programs don't fail because the science was wrong. They fail because regulatory thinking entered the conversation three years too late — after the choices that locked the program into an unapprovable corner had already been made.</p>
-    <p>The endpoint was chosen for mechanistic beauty, not regulatory acceptability. The manufacturing process was designed for the lab, not for scale. The safety profile was tested for the journal, not for the label.</p>
-    <p>And by the time someone asks <em>"can this actually get approved?"</em> — you're not pivoting. You're starting over. Or walking away.</p>
-    <p>This is why technology transfer, translational teams, and early regulatory strategy are not bureaucratic overhead. They are load-bearing walls. Remove them from the design process and the building looks fine until it doesn't.</p>
-  </div>
-
-  <div class="beat">
-    <span class="beat-num">05</span>
-    <p class="beat-hook">For investors, this is the hidden risk that doesn't show up on a pitch deck.</p>
-    <p>You can fund brilliant science with a compelling hypothesis, strong preclinical data, and a world-class scientific founder — and still watch it fail IND-enabling studies because nobody asked the right regulatory questions at the asset design phase.</p>
-    <p>The question isn't just: "Is the biology compelling?" The question is: "Has anyone run this through the lens of approvability, manufacturability, and regulatory pathway fit — from day one?"</p>
-    <p>When I evaluate assets, I use a four-dimensional lens: Biology, Endpoint, CMC, and Regulatory. All four, together, from the very start. Because a program that scores perfectly on three and fails on one can still be a write-off.</p>
-  </div>
-
-  <callout class="callout">
-    "It's rarely a science problem. It's a workflow and timing problem — and those are solvable."
-  </callout>
-
-  <span class="section-tag">The Way Forward</span>
-
-  <div class="beat">
-    <span class="beat-num">06</span>
-    <p class="beat-hook">So what's the actual answer? Do we turn scientists into regulators?</p>
-    <p>No. That would kill the creativity that makes the science worth building in the first place.</p>
-    <p>The answer is to bring regulatory architecture into scientific design from the very beginning — not as a checkpoint at the end, but as a co-design partner from the start.</p>
-    <p>It means translational teams that speak both languages fluently. It means regulatory strategy sessions before IND-enabling studies, not after they fail. It means teaching scientists what questions regulators will ask — so that the experiments designed in year one generate data that actually answers those questions in year four.</p>
-    <p>It means treating regulatory literacy the way we treat statistical literacy: not as an optional add-on for people who want to go into industry, but as foundational competency for anyone who wants their work to reach a patient.</p>
-    <p>The science-to-approval gap is not inevitable. It's a design flaw. And design flaws can be fixed.</p>
-  </div>
-
-  <!-- CLOSING BLOCK -->
   <div class="cta-block">
-    <h2>The most important question in biotech isn't <em>"Does it work?"</em></h2>
-    <p>It's: <em>"Can it work — and get approved — at scale, safely, reproducibly, and within a regulatory framework that exists in the real world?"</em></p>
-    <p>If you're a scientist, start asking regulatory questions earlier than feels comfortable.</p>
-    <p>If you're an investor, add regulatory diligence to your scientific diligence — they're not the same thing.</p>
-    <p>And if you're building a biotech — build your translational infrastructure like it's as important as your science. Because it is.</p>
-    <p>The gap is structural. Which means the fix is structural too. And it starts on day one.</p>
-    <span class="sign-off">— End of Script &nbsp;·&nbsp; ~3 min delivery &nbsp;·&nbsp; LinkedIn / Video / Keynote</span>
-  </div>
-
-  <!-- DIRECTOR NOTES -->
-  <div class="director-notes">
-    <strong>Director's Notes — Delivery Guide</strong>
-       <div class="note-item">⬛ TONE overall: Measured authority — not alarmist, not academic. You've seen this. You know the fix.</div>
+    <h2>Science. Regulation. Business. <em>Designed Together.</em></h2>
+    <p>If you're building, funding, or scaling innovation in regulated markets, design with all three systems in view from the beginning.</p>
+    <span class="sign-off">Strategic Analysis · Regulatory Architecture · Translational Systems Thinking</span>
   </div>
 
 </main>
